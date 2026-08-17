@@ -59,6 +59,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-board: var(--board);
+  --color-grid-line: var(--grid-line);
+  --color-food: var(--food);
 }
 
 :root {
@@ -152,5 +155,12 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+@layer base {
+  body {
+    background-image: var(--gradient-arena);
+    background-attachment: fixed;
   }
 }
