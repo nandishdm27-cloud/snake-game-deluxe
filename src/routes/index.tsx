@@ -107,7 +107,8 @@ function SnakeGame() {
       setSnake((prev) => {
         const nextDir = queued.current.shift() ?? dir.current;
         dir.current = nextDir;
-        const head = { x: prev[0].x + nextDir.x, y: prev[0].y + nextDir.y };
+        const first = prev[0]!;
+        const head = { x: first.x + nextDir.x, y: first.y + nextDir.y };
 
         if (head.x < 0 || head.y < 0 || head.x >= SIZE || head.y >= SIZE) {
           setStatus("over");
